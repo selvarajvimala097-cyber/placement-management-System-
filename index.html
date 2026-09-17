@@ -1,68 +1,107 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Students - Placement Management System</title>
+    <title>Placement Management System</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+    <!-- Sidebar -->
     <div class="sidebar">
+
         <h2>Placement System</h2>
 
         <a href="index.html">Dashboard</a>
         <a href="students.html">Students</a>
         <a href="companies.html">Companies</a>
         <a href="placements.html">Placements</a>
+
     </div>
 
+
+    <!-- Main Content -->
     <div class="main">
 
-        <h1>Students</h1>
-        <p>Manage student details</p>
+        <h1>Placement Dashboard</h1>
 
-        <div class="form-box">
+        <p>Manage and monitor placement activities</p>
 
-            <input type="text" id="name" placeholder="Student Name">
 
-            <input type="text" id="rollno" placeholder="Roll Number">
+        <!-- Input Section -->
 
-            <input type="text" id="department" placeholder="Department">
+        <div class="input-box">
 
-            <input type="number" id="year" placeholder="Year">
+            <h2>Enter Placement Details</h2>
 
-            <button onclick="addStudent()">Add Student</button>
+            <input type="number"
+                   id="totalStudents"
+                   placeholder="Total Students">
+
+            <input type="number"
+                   id="placedStudents"
+                   placeholder="Students Placed">
+
+            <input type="number"
+                   id="companies"
+                   placeholder="Total Companies">
+
+            <input type="number"
+                   id="offers"
+                   placeholder="Total Offers">
+
+            <button onclick="calculateDashboard()">
+                Calculate
+            </button>
 
         </div>
 
-        <div class="search-box">
 
-            <input type="text"
-                   id="search"
-                   placeholder="Search student..."
-                   onkeyup="searchStudent()">
+        <!-- Dashboard Cards -->
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Total Students</h3>
+                <h2 id="studentCount">0</h2>
+            </div>
+
+
+            <div class="card">
+                <h3>Students Placed</h3>
+                <h2 id="placedCount">0</h2>
+            </div>
+
+
+            <div class="card">
+                <h3>Companies</h3>
+                <h2 id="companyCount">0</h2>
+            </div>
+
+
+            <div class="card">
+                <h3>Job Offers</h3>
+                <h2 id="offerCount">0</h2>
+            </div>
 
         </div>
 
-        <table>
 
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Roll Number</th>
-                    <th>Department</th>
-                    <th>Year</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
+        <!-- Efficiency -->
 
-            <tbody id="studentTable">
+        <div class="efficiency">
 
-            </tbody>
+            <h2>Placement Efficiency</h2>
 
-        </table>
+            <h1 id="percentage">0%</h1>
+
+            <p>Students placed out of total students</p>
+
+        </div>
+
 
     </div>
+
 
     <script src="js/script.js"></script>
 
