@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f6fa;
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background-color: #222;
+    position: fixed;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 10px;
+    margin-bottom: 5px;
+}
+
+.sidebar a:hover {
+    background-color: #444;
+}
+
+/* Main */
+
+.main {
+    margin-left: 220px;
+    padding: 30px;
+}
+
+.main h1 {
+    margin-bottom: 10px;
+}
+
+/* Cards */
+
+.cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: white;
+    width: 220px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-size: 30px;
+}
+
+/* Welcome */
+
+.welcome {
+    background-color: white;
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 10px;
+}
